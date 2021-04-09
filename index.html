@@ -23,7 +23,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-lg-3">
-            <img class="logo" src="./assets/images/logo.png" alt="" />
+            <img class="header__logo" src="./assets/images/logo.png" alt="" />
           </div>
           <div class="col-6 col-lg-9 d-flex justify-content-end">
             <div class="nav">
@@ -38,27 +38,20 @@
                 <li><a class="nav__anchor" href="#">Contact Me</a></li>
               </ul>
             </div>
-            <img class="hamburger" src="./assets/images/hamburger.png" alt="" />
+            <img
+              class="header__hamburger"
+              src="./assets/images/hamburger.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
     </header>
     <section class="banner m-0">
       <div class="banner__slider">
-        <div class="banner__item">
+        <div>
           <img
-            class="banner__img"
-            src="./assets/images/banner-mob.jpg"
-            srcset="
-              ./assets/images/banner-mob.jpg     750w,
-              ./assets/images/banner-desktop.jpg
-            "
-            alt=""
-          />
-        </div>
-        <div class="banner__item">
-          <img
-            class="banner__img"
+            class="w-100"
             src="./assets/images/banner-mob.jpg"
             srcset="
               ./assets/images/banner-mob.jpg     750w,
@@ -69,7 +62,18 @@
         </div>
         <div>
           <img
-            class="banner__img"
+            class="w-100"
+            src="./assets/images/banner-mob.jpg"
+            srcset="
+              ./assets/images/banner-mob.jpg     750w,
+              ./assets/images/banner-desktop.jpg
+            "
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="w-100"
             src="./assets/images/banner-mob.jpg"
             srcset="
               ./assets/images/banner-mob.jpg     750w,
@@ -118,7 +122,7 @@
         </div>
       </div>
     </section>
-    <section class="review pt-5 pb-4">
+    <section class="review pt-5 pb-5">
       <div class="container">
         <div class="text-center mb-4">
           <h2 class="mb-2 pb-1 letter-space-5">REVIEWS</h2>
@@ -131,8 +135,18 @@
               src="./assets/images/thumb.png"
               alt=""
             />
-            <h4 class="mb-2 font-bold">RICKY HARVARD</h4>
-            <span class="d-inline-block mb-3">Dell</span>
+            <h4 class="review__author">RICKY HARVARD</h4>
+            <div class="">
+              <div class="">Dell</div>
+              <div class="rating">
+                <span class="rating__star"></span>
+                <span class="rating__star"></span>
+                <span class="rating__star"></span>
+                <span class="rating__star"></span>
+                <span class="rating__star rating__star--unfill"></span>
+              </div>
+            </div>
+            <span class="review__collon">“</span>
             <p>
               Lorem ipsu m dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
@@ -208,9 +222,9 @@
               eiusmod tempor incididunt ut labore et
             </p>
             <div>
-              <h3 class="fixer__name mb-3">- SUMAN DUBEY</h3>
+              <h3 class="fixer__name mb-3 letter-space-5">- SUMAN DUBEY</h3>
             </div>
-            <p class="d-inline-block mb-3">Buy now on</p>
+            <p class="d-inline-block mb-2 font-small">Buy now on</p>
             <div class="buyfrom">
               <div class="buyfrom__list">
                 <img
@@ -318,14 +332,53 @@
       $(document).ready(function () {
         $(".banner__slider").slick({
           dots: true,
+          arrows: false,
+          mobileFirst: true,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                arrows: true,
+              },
+            },
+          ],
         });
         $(".review__slider").slick({
-          slidesToShow: 3,
+          arrows: false,
           dots: true,
+          mobileFirst: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+          ],
         });
         $(".media__slider").slick({
-          slidesToShow: 3,
-          dots: true,
+          arrows: false,
+          mobileFirst: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 3,
+              },
+            },
+          ],
         });
       });
     </script>

@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
@@ -38,7 +43,43 @@
         </div>
       </div>
     </header>
-    <section class="banner m-0"></section>
+    <section class="banner m-0">
+      <div class="banner__slider">
+        <div class="banner__item">
+          <img
+            class="banner__img"
+            src="./assets/images/banner-mob.jpg"
+            srcset="
+              ./assets/images/banner-mob.jpg     750w,
+              ./assets/images/banner-desktop.jpg
+            "
+            alt=""
+          />
+        </div>
+        <div class="banner__item">
+          <img
+            class="banner__img"
+            src="./assets/images/banner-mob.jpg"
+            srcset="
+              ./assets/images/banner-mob.jpg     750w,
+              ./assets/images/banner-desktop.jpg
+            "
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="banner__img"
+            src="./assets/images/banner-mob.jpg"
+            srcset="
+              ./assets/images/banner-mob.jpg     750w,
+              ./assets/images/banner-desktop.jpg
+            "
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
     <section class="author">
       <div class="container">
         <div class="row align-items-center">
@@ -62,27 +103,36 @@
             <a href="#">
               <button class="btn">know more</button>
             </a>
-            <div class="social">
-              <a class="social__anchor social__anchor--facebook" href="#"></a>
-              <a class="social__anchor social__anchor--instagram" href="#"></a>
-              <a class="social__anchor social__anchor--twitter" href="#"></a>
-              <a class="social__anchor social__anchor--linkdin" href="#"></a>
+            <div class="mb-3">
+              <div class="social">
+                <a class="social__anchor social__anchor--facebook" href="#"></a>
+                <a
+                  class="social__anchor social__anchor--instagram"
+                  href="#"
+                ></a>
+                <a class="social__anchor social__anchor--twitter" href="#"></a>
+                <a class="social__anchor social__anchor--linkdin" href="#"></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="review-bg pt-5 pb-4">
+    <section class="review pt-5 pb-4">
       <div class="container">
         <div class="text-center mb-4">
-          <h2 class="mb-3 letter-space-2">REVIEWS</h2>
-          <h3 class="letter-space-2">KIND WORDS FROM READERS</h3>
+          <h2 class="mb-2 pb-1 letter-space-5">REVIEWS</h2>
+          <h3 class="letter-space-5">KIND WORDS FROM READERS</h3>
         </div>
-        <div class="d-flex mb-5">
-          <div class="review mx-2 p-4">
-            <img class="review__thumb" src="./assets/images/thumb.png" alt="" />
-            <h4 class="font-bold">RICKY HARVARD</h4>
-            <span class="d-inline-block mb-2">Dell</span>
+        <div class="review__slider mb-5">
+          <div class="review__item mx-2 p-4">
+            <img
+              class="review__thumb mb-3 pb-2"
+              src="./assets/images/thumb.png"
+              alt=""
+            />
+            <h4 class="mb-2 font-bold">RICKY HARVARD</h4>
+            <span class="d-inline-block mb-3">Dell</span>
             <p>
               Lorem ipsu m dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
@@ -90,14 +140,44 @@
               labore et
             </p>
           </div>
-          <div class="review mx-2 p-4">
+          <div class="review__item mx-2 p-4">
             <img
-              class="review__thumb mb-2"
+              class="review__thumb mb-3 pb-2"
               src="./assets/images/thumb.png"
               alt=""
             />
-            <h4 class="font-bold">RICKY HARVARD</h4>
-            <span class="d-inline-block mb-2">Dell</span>
+            <h4 class="mb-2 font-bold">RICKY HARVARD</h4>
+            <span class="d-inline-block mb-3">Dell</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et
+            </p>
+          </div>
+          <div class="review__item mx-2 p-4">
+            <img
+              class="review__thumb mb-3 pb-2"
+              src="./assets/images/thumb.png"
+              alt=""
+            />
+            <h4 class="mb-2 font-bold">RICKY HARVARD</h4>
+            <span class="d-inline-block mb-3">Dell</span>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et
+            </p>
+          </div>
+          <div class="review__item mx-2 p-4">
+            <img
+              class="review__thumb mb-3 pb-2"
+              src="./assets/images/thumb.png"
+              alt=""
+            />
+            <h4 class="mb-2 font-bold">RICKY HARVARD</h4>
+            <span class="d-inline-block mb-3">Dell</span>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet,
@@ -122,7 +202,7 @@
           <div class="col-lg-6">
             <img class="fixer__logo" src="./assets/images/fixer.png" alt="" />
             <h3 class="fixer__heading">Winning has a price.</h3>
-            <h3 class="fixer__heading mb-2">How much will you pay?</h3>
+            <h3 class="fixer__heading mb-3">How much will you pay?</h3>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et
@@ -151,35 +231,65 @@
         </div>
       </div>
     </section>
-    <section class="media mb-0 pt-4 pb-4">
+    <section class="media mb-0 pt-5 pb-4">
       <div class="container">
         <div class="text-center">
-          <h2 class="letter-space-2 mb-2">Media</h2>
-          <h3 class="letter-space-2 mb-3">Latest Updates</h3>
+          <h2 class="letter-space-5 mb-2">Media</h2>
+          <h3 class="letter-space-5 mb-4">Latest Updates</h3>
         </div>
-        <div class="media-slider">
-          <div class="media-item">
+        <div class="media__slider mb-3">
+          <div class="media__item">
             <img class="mb-3" src="./assets/images/media1.jpg" alt="" />
             <h4 class="mb-2 font-bold">Lorem ipsum dolor sit amet.</h4>
-            <h4 class="mb-2 text-uppercase">21 February 2020</h4>
+            <h4 class="mb-3 text-uppercase">21 February 2020</h4>
             <p class="mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. At, eius.
             </p>
-            <div class="text-center">
-              <a href="#">
-                <button class="btn">View All</button>
-              </a>
-            </div>
           </div>
+          <div class="media__item">
+            <img class="mb-3" src="./assets/images/media1.jpg" alt="" />
+            <h4 class="mb-2 font-bold">Lorem ipsum dolor sit amet.</h4>
+            <h4 class="mb-3 text-uppercase">21 February 2020</h4>
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At, eius.
+            </p>
+          </div>
+          <div class="media__item">
+            <img class="mb-3" src="./assets/images/media1.jpg" alt="" />
+            <h4 class="mb-2 font-bold">Lorem ipsum dolor sit amet.</h4>
+            <h4 class="mb-3 text-uppercase">21 February 2020</h4>
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At, eius.
+            </p>
+          </div>
+          <div class="media__item">
+            <img class="mb-3" src="./assets/images/media1.jpg" alt="" />
+            <h4 class="mb-2 font-bold">Lorem ipsum dolor sit amet.</h4>
+            <h4 class="mb-3 text-uppercase">21 February 2020</h4>
+            <p class="mb-4">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. At, eius.
+            </p>
+          </div>
+        </div>
+        <div class="text-center">
+          <a href="#">
+            <button class="btn btn--transparent">View All</button>
+          </a>
         </div>
       </div>
     </section>
-    <footer class="footer pt-3 pb-3 text-center text-lg-left">
+    <footer class="footer pt-4 pb-4 text-center text-lg-left">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-4">@2020 - All Rights Reserved</div>
-          <div class="col-lg-4">Suman@sumandubey.com</div>
           <div class="col-lg-4">
+            <div class="mb-3 mb-lg-0">@2020 - All Rights Reserved</div>
+          </div>
+          <div class="col-lg-4">
+            <div class="mb-3 mb-lg-0">
+              <a href="#" class="footer-email">Suman@sumandubey.com</a>
+            </div>
+          </div>
+          <div class="col-lg-4 d-flex justify-content-center">
             <div class="social">
               <a class="social__anchor social__anchor--facebook" href="#"></a>
               <a class="social__anchor social__anchor--instagram" href="#"></a>
@@ -191,9 +301,33 @@
       </div>
     </footer>
     <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script
       src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function () {
+        $(".banner__slider").slick({
+          dots: true,
+        });
+        $(".review__slider").slick({
+          slidesToShow: 3,
+          dots: true,
+        });
+        $(".media__slider").slick({
+          slidesToShow: 3,
+          dots: true,
+        });
+      });
+    </script>
   </body>
 </html>

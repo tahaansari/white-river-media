@@ -141,7 +141,7 @@ table {
 // COMMON STYLING START
 .btn {
   position: relative;
-  padding: 12px 22px;
+  padding: 14px 22px;
   background: #ffffff;
   border: 1px solid #000000;
   border-left-width: 4px;
@@ -236,12 +236,23 @@ a:hover {
   padding: 20px 0;
   z-index: 1;
   width: 100%;
-  // background: black;
+  transition: .3s;
   &__logo {
     display: block;
     width: 100px;
+    transition: .3s;
     @media (min-width: 768px) {
       width: 160px;
+    }
+  }
+  &.fixed{
+    padding: 10px 0;
+    background: #000000;
+    .header__logo {
+        width: 80px;
+        @media (min-width: 768px) {
+            width: 120px;
+        }
     }
   }
   &__hamburger {
@@ -309,13 +320,13 @@ a:hover {
         border: none;
         font-size: 0;
         padding: 0;
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
         @media (min-width: 992px) {
           width: 15px;
           height: 15px;
         }
-        margin: 0 6px;
+        margin: 0 5px;
         border-radius: 50%;
         outline: none;
       }
@@ -359,9 +370,10 @@ a:hover {
   background: url(../images/review-bg.jpg) no-repeat center/cover;
   position: relative;
   &__slider {
+      margin-bottom: 20px;
     .slick-dots {
       position: absolute;
-      bottom: -135px;
+      bottom: -100px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -384,10 +396,15 @@ a:hover {
       }
     }
   }
+  &__subheading{
+    line-height: 1.6;
+  }
   &__item {
     font-size: 14px;
     background-color: #ffffff;
     border-radius: 5px;
+    padding: 20px;
+    margin: 15px;
     filter: drop-shadow(0 0 4.5px rgba(193, 193, 193, 0.66));
   }
   &__thumb {
@@ -402,6 +419,9 @@ a:hover {
     font-size: 42px;
     font-weight: bold;
     display: inline-block;
+    margin-bottom: 1rem;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -410,10 +430,37 @@ a:hover {
   color: #ffffff;
   &__slider {
     display: flex;
+    margin-bottom: 40px;
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        font-size: 0;
+        padding: 0;
+        width: 30px;
+        height: 60px;
+        border: none;
+        outline: none;
+        &.slick-prev {
+          left: 0px;
+          background: url(../images/prev.png) no-repeat center/contain;
+        }
+        &.slick-next {
+          right: 0px;
+          background: url(../images/prev.png) no-repeat center/contain;
+          transform: rotate(-180deg) translateY(30px);
+        }
+      }
+  }
+  &__subheading{
+      letter-spacing: 6px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
   }
   &__item {
     font-size: 14px;
-    margin: 0 10px;
+    margin: 0 15px;
   }
 }
 

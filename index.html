@@ -94,7 +94,7 @@
       <div class="banner__slider">
         <div>
           <img
-            class="w-100"
+            class="w-100 banner__img"
             src="./assets/images/banner.jpeg"
             srcset="
               ./assets/images/banner-mobile.jpeg 750w,
@@ -102,13 +102,30 @@
             "
             alt=""
           />
-          <div class="banner__content">
-            <img src="./assets/images/fixer-white.png" alt="" />
-            <h2>Winning has a price. How much will you pay?</h2>
-            <p>available on</p>
-            <img src="./assets/images/amazon-white.png" alt="" />
-            <img src="./assets/images/flipkart-white.png" alt="" />
-            and all bookstores near you
+          <div class="container">
+            <div class="banner__content">
+              <img
+                class="banner__logo"
+                src="./assets/images/fixer-white.png"
+                alt=""
+              />
+              <h2 class="banner__heading">Winning has a price.</h2>
+              <h2 class="banner__heading">How much will you pay?</h2>
+              <p class="banner__available">available on</p>
+              <div class="banner__ecommerce">
+                <img
+                  class="banner__ecommerce-amazon"
+                  src="./assets/images/amazon-white.png"
+                  alt=""
+                />
+                <img
+                  class="banner__ecommerce-flipkart"
+                  src="./assets/images/flipkart-white.png"
+                  alt=""
+                />
+              </div>
+              <p class="banner__bookstore">and all bookstores near you</p>
+            </div>
           </div>
         </div>
       </div>
@@ -427,12 +444,14 @@
           <div class="col-lg-4">
             <div class="mb-3 mb-lg-0">@2020 - All Rights Reserved</div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 d-flex justify-content-center">
             <div class="mb-3 mb-lg-0">
               <a href="#" class="footer-email">Suman@sumandubey.com</a>
             </div>
           </div>
-          <div class="col-lg-4 d-flex justify-content-center">
+          <div
+            class="col-lg-4 d-flex justify-content-end justify-content-lg-center"
+          >
             <div class="social">
               <a class="social__anchor social__anchor--facebook" href="#"></a>
               <a class="social__anchor social__anchor--instagram" href="#"></a>

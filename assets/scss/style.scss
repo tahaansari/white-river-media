@@ -237,23 +237,23 @@ a:hover {
   padding: 20px 0;
   z-index: 1;
   width: 100%;
-  transition: .3s;
+  transition: 0.3s;
   &__logo {
     display: block;
     width: 100px;
-    transition: .3s;
+    // transition: .3s;
     @media (min-width: 768px) {
       width: 160px;
     }
   }
-  &.fixed{
+  &.fixed {
     padding: 10px 0;
     background: #000000;
     .header__logo {
-        width: 80px;
-        @media (min-width: 768px) {
-            width: 120px;
-        }
+      width: 80px;
+      @media (min-width: 768px) {
+        width: 120px;
+      }
     }
   }
   &__hamburger {
@@ -296,11 +296,11 @@ a:hover {
       border: none;
       outline: none;
       &.slick-prev {
-        left: 15px;
+        left: 25px;
         background: url(../images/prev.png) no-repeat center/contain;
       }
       &.slick-next {
-        right: 15px;
+        right: 25px;
         background: url(../images/prev.png) no-repeat center/contain;
         transform: rotate(-180deg) translateY(30px);
       }
@@ -368,10 +368,10 @@ a:hover {
 }
 
 .review {
-  background: url(../images/review-bg.jpg) no-repeat center/cover;
+  background: url(../images/review-bg.jpg) no-repeat fixed center/cover;
   position: relative;
   &__slider {
-      margin-bottom: 20px;
+    margin-bottom: 20px;
     .slick-dots {
       position: absolute;
       bottom: -100px;
@@ -397,7 +397,7 @@ a:hover {
       }
     }
   }
-  &__subheading{
+  &__subheading {
     line-height: 1.6;
   }
   &__item {
@@ -426,6 +426,12 @@ a:hover {
   }
 }
 
+// .author {
+//   &__img {
+//     height: 500px;
+//   }
+// }
+
 .media {
   background: #660004;
   color: #ffffff;
@@ -433,31 +439,31 @@ a:hover {
     display: flex;
     margin-bottom: 40px;
     .slick-arrow {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1;
-        font-size: 0;
-        padding: 0;
-        width: 30px;
-        height: 60px;
-        border: none;
-        outline: none;
-        &.slick-prev {
-          left: 0px;
-          background: url(../images/prev.png) no-repeat center/contain;
-        }
-        &.slick-next {
-          right: 0px;
-          background: url(../images/prev.png) no-repeat center/contain;
-          transform: rotate(-180deg) translateY(30px);
-        }
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      font-size: 0;
+      padding: 0;
+      width: 30px;
+      height: 60px;
+      border: none;
+      outline: none;
+      &.slick-prev {
+        left: 0px;
+        background: url(../images/prev.png) no-repeat center/contain;
       }
+      &.slick-next {
+        right: 0px;
+        background: url(../images/prev.png) no-repeat center/contain;
+        transform: rotate(-180deg) translateY(30px);
+      }
+    }
   }
-  &__subheading{
-      letter-spacing: 6px;
-      margin-bottom: 24px;
-      text-transform: uppercase;
+  &__subheading {
+    letter-spacing: 6px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
   }
   &__item {
     font-size: 14px;

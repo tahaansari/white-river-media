@@ -180,6 +180,7 @@ table {
 body {
   font-family: "Montserrat", sans-serif;
   color: #626262;
+  overflow-x: hidden;
 }
 
 h2 {
@@ -462,7 +463,7 @@ a:hover {
   }
   &__subheading {
     letter-spacing: 6px;
-    margin-bottom: 24px;
+    margin-bottom: 28px;
     text-transform: uppercase;
   }
   &__item {
@@ -533,4 +534,30 @@ a:hover {
       background: url(../images/star-blank.png) no-repeat center/contain;
     }
   }
+}
+
+
+.book{
+  position: relative;
+  &__bg{
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+  &__img{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    @media(min-width: 992px){
+      width: 120%;
+      max-width: initial;
+    }
+  }
+}
+
+.container{
+  padding-right: 30px;
+    padding-left: 30px;
 }

@@ -37,21 +37,19 @@ $(".review__slider").slick({
 });
 
 $(".media__slider").slick({
-    arrows: true,
+    arrows: false,
     mobileFirst: true,
     responsive: [
     {
         breakpoint: 768,
         settings: {
         slidesToShow: 2,
-        arrows: false,
         },
     },
     {
         breakpoint: 992,
         settings: {
         slidesToShow: 3,
-        arrows: false,
         },
     },
     ],

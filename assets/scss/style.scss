@@ -180,7 +180,6 @@ table {
 body {
   font-family: "Montserrat", sans-serif;
   color: #626262;
-  overflow-x: hidden;
 }
 
 h2 {
@@ -220,6 +219,7 @@ img {
 
 section {
   margin: 30px 0;
+  overflow: hidden;
   @media (min-width: 992px) {
     margin: 60px 0;
   }
@@ -284,6 +284,10 @@ a:hover {
 
 .banner {
   position: relative;
+  &__content{
+    position: absolute;
+    top: 50%;
+  }
   &__slider {
     .slick-arrow {
       position: absolute;
@@ -551,7 +555,7 @@ a:hover {
     transform: translateY(-50%);
     width: 100%;
     @media(min-width: 992px){
-      width: 120%;
+      width: 100%;
       max-width: initial;
     }
   }

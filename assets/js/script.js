@@ -1,7 +1,3 @@
-AOS.init({
-    // offset: 0    
-});
-
 $(".banner__slider").slick({
     dots: true,
     arrows: false,
@@ -55,8 +51,13 @@ $(".media__slider").slick({
     ],
 });
 
+$(window).on('load', function () {
+    // console.log("Window Loaded");
+    AOS.init();
+});
+
 $(window).scroll(function () {  
-    console.log("scroling...");
+    // console.log("scroling...");
     if (window.pageYOffset > 100) {
         document.getElementsByClassName("header")[0].classList.add("fixed");
     } else {
@@ -79,8 +80,6 @@ $(window).scroll(function () {
 //     ease: "none",
 // });
 
-
-
 // gsap.from(".social__anchor", {
 //     scrollTrigger:{
 //         trigger:".social",
@@ -98,4 +97,4 @@ $(window).scroll(function () {
 //     x: -200,
 //     duration: .4,
 //     ease: "none",
-// });     
+// });
